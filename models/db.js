@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/csv")
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("Data base connect successfully");
   })
